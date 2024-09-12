@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1089355618698",
+    "project_id": "brokieapp-1089f",
+    "storage_bucket": "brokieapp-1089f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1089355618698:android:03f223f3e66bac89919073",
+        "android_client_info": {
+          "package_name": "com.example.brokieapp02"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1089355618698-9bgqg50nj6umbee48p64gh3eitha39tn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.brokieapp02",
+            "certificate_hash": "ca1126662c874680196021f64795fa8ad3ea911f"
+          }
+        },
+        {
+          "client_id": "1089355618698-0lf4onikj2eq7thn10m430ssjhl5ovib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzW0qPBKaT9_09gmiW06lzLPqyDC2ejoo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1089355618698-0lf4onikj2eq7thn10m430ssjhl5ovib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

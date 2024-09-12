@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BrokieApp 0.2</string>
+    <string name="value">Value</string>
+    <string name="enter_value">Enter Value</string>
+    <string name="enter_limit">Enter Limit</string>
+    <string name="_0">0</string>
+    <string name="brokieapp">BrokieApp</string>
+</resources>
