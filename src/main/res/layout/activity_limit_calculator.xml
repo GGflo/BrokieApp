@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#1D1C20">
+
+    <!-- Header Text -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Limit Calculator"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#4CAF50"
+        android:padding="16dp"
+        android:background="@drawable/light_border"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="32dp"
+        android:paddingBottom="24dp"
+        android:background="#FE2F2F2F"
+        android:elevation="4dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textViewMonthlyIncome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monthly Income"
+            android:textSize="18sp"
+            android:textColor="#78BF3F"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_horizontal" />
+
+        <EditText
+            android:id="@+id/enterIncome"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Enter Income"
+            android:inputType="number"
+            android:textSize="25sp"
+            android:textColorHint="#6F6F6F"
+            android:textColor="#6B81FF"
+            android:padding="12dp"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/buttonCalculate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:textSize="20sp"
+            android:backgroundTint="#4CAF50"
+            android:text="Calculate"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <!-- Recommended Limits Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp"
+        android:background="#282828"
+        android:elevation="4dp"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/textViewRecommended"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommended Limits"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#4CAF50"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3">
+
+            <!-- Super Saver Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textViewSuperSaver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15%\nSuper Saver"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#4CAF50"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limit"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/textViewSSLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#FF1717"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewSSS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saving"
+                    android:textSize="16sp"
+                    android:textColor="#757575"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:id="@+id/textViewSSaverAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#90DBDBDB"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/buttonApplySS"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textSize="18sp"
+                    android:backgroundTint="#732F5D41"
+                    android:text="Apply"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Saver Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textViewSaver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10%\nSaver"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#FF9800"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limit"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/textViewSaverLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#DD1D1B"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/textViewSSaving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saving"
+                    android:textSize="16sp"
+                    android:textColor="#757575"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:id="@+id/textViewSaverAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#757575"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/buttonApplyS"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textSize="18sp"
+                    android:backgroundTint="#732F5D41"
+                    android:text="Apply"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+            <!-- Exact Column -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textExact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%\nExact"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#F44336"
+                    android:gravity="center"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Limit"
+                    android:layout_marginTop="10dp"/>
+                <TextView
+                    android:id="@+id/textViewExactLimit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#D4201D"
+                    android:gravity="center"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:id="@+id/textViewESaving"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Saving"
+                    android:textSize="16sp"
+                    android:textColor="#757575"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:id="@+id/textViewEAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#757575"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/buttonApplyE"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:textSize="18sp"
+                    android:backgroundTint="#732F5D41"
+                    android:text="Apply"
+                    android:textColor="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -15,6 +15,9 @@
         <activity
             android:name=".DailyTotalsActivity"
             android:exported="false" />
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".LimitCalculatorActivity"/>
+        <activity android:name=".MiscellaneousActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">

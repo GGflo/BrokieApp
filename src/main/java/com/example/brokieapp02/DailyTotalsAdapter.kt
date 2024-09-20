@@ -6,11 +6,12 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class DailyTotalsAdapter(private val dailyTotals: List<Pair<String, Int>>) : RecyclerView.Adapter<DailyTotalsAdapter.ViewHolder>() {
+class DailyTotalsAdapter(private val dailyTotals: List<Pair<String, Int>>, private val dailyLimit: Int) : RecyclerView.Adapter<DailyTotalsAdapter.ViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val dateTextView: TextView = view.findViewById(R.id.dateTextView)
-        val totalTextView: TextView = view.findViewById(R.id.totalTextView)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val dateTextView: TextView = itemView.findViewById(R.id.dateTextView)
+        val totalTextView: TextView = itemView.findViewById(R.id.totalTextView)
+        val surplusTextView: TextView = itemView.findViewById(R.id.surplusTextView)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -20,10 +21,28 @@ class DailyTotalsAdapter(private val dailyTotals: List<Pair<String, Int>>) : Rec
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val (date, total) = dailyTotals[position]
-        holder.dateTextView.text = date // Display the formatted date
+        val surplus = dailyLimit - total
+
+        holder.dateTextView.text = date
         holder.totalTextView.text = total.toString()
+        holder.surplusTextView.text = surplus.toString()
+
+        holder.surplusTextView.text = if (surplus >= 0) {
+            "+$surplus"
+        } else {
+            surplus.toString()
+        }
+        holder.surplusTextView.setTextColor(
+            if (surplus >= 0)holder.itemView.context.getColor(android.R.color.holo_green_dark)
+            else holder.itemView.context.getColor(android.R.color.holo_red_dark)
+        )
+        holder.totalTextView.setTextColor(
+            if (total>=dailyLimit) holder.itemView.context.getColor(android.R.color.holo_orange_light)
+            else holder.itemView.context.getColor(android.R.color.white)
+        )
     }
 
-    override fun getItemCount(): Int = dailyTotals.size
+    override fun getItemCount(): Int {
+        return dailyTotals.size
+    }
 }
-

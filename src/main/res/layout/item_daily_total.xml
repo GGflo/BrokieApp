@@ -4,21 +4,33 @@
     android:orientation="horizontal"
     android:padding="8dp">
 
+    <!-- Date on the left -->
     <TextView
         android:id="@+id/dateTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="11.09.2024"
-        android:textSize="16sp"
-         />
+        android:textSize="16sp" />
 
+    <!-- Total in the middle -->
     <TextView
         android:id="@+id/totalTextView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
         android:text="100"
+        android:textSize="16sp" />
+
+    <!-- Surplus on the right -->
+    <TextView
+        android:id="@+id/surplusTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="50"
         android:textSize="16sp"
-         />
+        android:layout_weight="1"
+        android:gravity="end"/>
 
 </LinearLayout>

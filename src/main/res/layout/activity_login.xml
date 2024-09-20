@@ -1,0 +1,122 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="Brokie App"
+        android:textColor="#FFB829"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:background="@drawable/rounded_corner_background" />
+
+    <!-- Email EditText -->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textAlignment="center"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"/>
+
+    <!-- Password EditText -->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:textAlignment="center"
+        android:inputType="textPassword"
+        android:minHeight="48dp"/>
+
+    <!-- Confirm Password EditText (Initially Hidden) -->
+    <EditText
+        android:id="@+id/confirmPasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+        android:textAlignment="center"
+        android:inputType="textPassword"
+        android:visibility="gone" />
+
+    <!-- Password Requirements -->
+    <TextView
+        android:id="@+id/requirementLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• At least 8 characters"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/requirementUppercase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Contains an uppercase letter"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/requirementNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Contains a number"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/requirementSpecial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="• Contains a special character"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+    <!-- Confirm Registration Button (Initially Hidden) -->
+    <Button
+        android:id="@+id/confirmRegistrationButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Registration"
+        android:visibility="gone" />
+
+    <!-- Sign In Button (Initially Hidden) -->
+    <Button
+        android:id="@+id/signInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:visibility="gone" />
+
+    <!-- Google Sign-In Button -->
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/googleSignInButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" />
+</LinearLayout>

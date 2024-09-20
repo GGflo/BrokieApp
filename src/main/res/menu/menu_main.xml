@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_daily"
+        android:title="Daily"
+        android:orderInCategory="0"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_limit_calculator"
+        android:title="Limit Calculator" />
+    <item
+            android:id="@+id/menu_miscellaneous"
+            android:title="Miscellaneous" />
+        <item
+            android:id="@+id/action_sign_out"
+            android:title="Sign Out" />
+
+
+</menu>
